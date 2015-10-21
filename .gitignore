@@ -2,3 +2,5 @@
 *.ipa
 *.zip
 /*.mobileprovision
+Payload
+*.p12
