@@ -9,11 +9,11 @@ A script and method for signing DPS 2015 apps in secure environments where the D
 
 Follow these steps to successfully sign your DPS 2015 app:
 
-* Clone this repo into a folder
-* Put your `.mobileprovision` file into this folder
-* Put your `YourAppName.ipa` file into this folder, and rename it to `YourAppName.zip`
+* Clone this repo. These instructions assume the folder's name is `dps-sign-sh/`.
+* Put your `.mobileprovision` file into `dps-sign-sh/`.
+* Put your `YourAppName.ipa` file `dps-sign-sh/`, and rename it to `YourAppName.zip`
+* Unzip `YourAppName.zip` by double clicking it in Finder. If you don’t unzip it this way, it will not preserve permissions, and the iOS device will reject the resulting IPA.
 * Edit `entitlements.plist` to ensure that the TEAM ID and BUNDLE Ids have changed. You may also want to remove the aps-environment key if your App Id does not include permissions for push notifications. The provided `entitlements.plist` file cannot be used out of the box. You must edit it with the proper values and entitlements.
-* Unzip `YourAppName.zip `by double clicking it in Finder. If you don’t unzip it this way, it will not preserve permissions, and the iOS device will reject the resulting IPA.
 * Run `sign.sh` and follow the prompts. It will ask you for:
   * The name of the signing certificate in Keychain Access.
   * The bundle id: e.g. com.sample.app
